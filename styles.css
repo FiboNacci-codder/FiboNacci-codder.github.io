@@ -1,0 +1,163 @@
+/* Import elegant font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Large title in the hero section - REDUCED */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+}
+
+/* Simpler description - REDUCED */
+.hero-description {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/* Container for the photo - SMALLER */
+.photo-container-small {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Photo inside the container */
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Elegant hover effect */
+.photo-container-small:hover .profile-photo {
+  transform: scale(1.05);
+}
+
+/* Adjustments for light mode */
+body.bg-light .hero-title {
+  color: #1a1a1a;
+}
+
+body.bg-light .hero-description {
+  color: #4a4a4a;
+}
+
+/* Content sections */
+.content-section {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.bg-light .content-section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Section titles */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+body.bg-light .section-title {
+  color: #1a1a1a;
+}
+
+/* Section text */
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+body.bg-light .section-text {
+  color: #4a4a4a;
+}
+
+/* Education and project items */
+.education-item,
+.project-item {
+  margin-bottom: 1rem;
+}
+
+.education-item h5,
+.project-item h5 {
+  color: #ffffff;
+}
+
+body.bg-light .education-item h5,
+body.bg-light .project-item h5 {
+  color: #1a1a1a;
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.skill-item {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Custom lists */
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.custom-list li:before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #64ffda;
+  font-weight: bold;
+}
+
+body.bg-light .custom-list li:before {
+  color: #0066cc;
+}
+
+/* Responsive - small screens */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+  }
+  
+  .photo-container-small {
+    width: 180px;
+    height: 180px;
+    margin-top: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-text {
+    font-size: 1rem;
+  }
+}

@@ -1,26 +1,26 @@
-/* Import elegant font from Google Fonts */
+/* Importar fuente elegante de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Large title in the hero section - REDUCED */
+/* Título grande en la sección hero - MÁS PEQUEÑO */
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.5rem;        /* ANTES: 3rem, AHORA: 2.5rem (40px) */
   font-weight: 700;
   letter-spacing: -2px;
   margin-bottom: 1.5rem;
 }
 
-/* Simpler description - REDUCED */
+/* Descripción más sencilla - MÁS PEQUEÑA */
 .hero-description {
-  font-size: 1.1rem;
+  font-size: 1rem;          /* ANTES: 1.1rem, AHORA: 1rem (16px) */
   font-weight: 300;
   line-height: 1.8;
 }
 
-/* Container for the photo - SMALLER */
+/* Contenedor de la foto - MÁS PEQUEÑO */
 .photo-container-small {
   display: inline-block;
   position: relative;
@@ -31,7 +31,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Photo inside the container */
+/* Foto dentro del contenedor */
 .profile-photo {
   width: 100%;
   height: 100%;
@@ -39,12 +39,12 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Elegant hover effect */
+/* Efecto hover elegante */
 .photo-container-small:hover .profile-photo {
   transform: scale(1.05);
 }
 
-/* Adjustments for light mode */
+/* Ajustes para modo claro */
 body.bg-light .hero-title {
   color: #1a1a1a;
 }
@@ -53,7 +53,7 @@ body.bg-light .hero-description {
   color: #4a4a4a;
 }
 
-/* Content sections */
+/* Secciones de contenido */
 .content-section {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -62,9 +62,9 @@ body.bg-light .content-section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Section titles */
+/* Títulos de sección - MÁS PEQUEÑOS */
 .section-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;        /* ANTES: 1.8rem, AHORA: 1.5rem (24px) */
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: #ffffff;
@@ -74,9 +74,9 @@ body.bg-light .section-title {
   color: #1a1a1a;
 }
 
-/* Section text */
+/* Texto de sección - MÁS PEQUEÑO */
 .section-text {
-  font-size: 1.1rem;
+  font-size: 0.95rem;       /* ANTES: 1.1rem, AHORA: 0.95rem (15.2px) */
   line-height: 1.8;
   color: #e0e0e0;
 }
@@ -85,7 +85,7 @@ body.bg-light .section-text {
   color: #4a4a4a;
 }
 
-/* Education and project items */
+/* Items de educación y proyectos */
 .education-item,
 .project-item {
   margin-bottom: 1rem;
@@ -93,6 +93,7 @@ body.bg-light .section-text {
 
 .education-item h5,
 .project-item h5 {
+  font-size: 1rem;          /* NUEVO: 1rem (16px) */
   color: #ffffff;
 }
 
@@ -101,18 +102,23 @@ body.bg-light .project-item h5 {
   color: #1a1a1a;
 }
 
-/* Skills grid */
+.education-item p,
+.project-item p {
+  font-size: 0.9rem;        /* NUEVO: 0.9rem (14.4px) */
+}
+
+/* Grid de habilidades - MÁS PEQUEÑO */
 .skills-grid {
   display: grid;
   gap: 0.8rem;
 }
 
 .skill-item {
-  font-size: 1rem;
+  font-size: 0.9rem;        /* ANTES: 1rem, AHORA: 0.9rem (14.4px) */
   line-height: 1.6;
 }
 
-/* Custom lists */
+/* Listas personalizadas - MÁS PEQUEÑAS */
 .custom-list {
   list-style: none;
   padding-left: 0;
@@ -123,6 +129,7 @@ body.bg-light .project-item h5 {
   position: relative;
   margin-bottom: 0.8rem;
   line-height: 1.6;
+  font-size: 0.9rem;        /* NUEVO: 0.9rem (14.4px) */
 }
 
 .custom-list li:before {
@@ -137,14 +144,19 @@ body.bg-light .custom-list li:before {
   color: #0066cc;
 }
 
-/* Responsive - small screens */
+/* Textos muted más pequeños */
+.text-muted {
+  font-size: 0.85rem !important;  /* NUEVO: 0.85rem (13.6px) */
+}
+
+/* Responsive - pantallas pequeñas */
 @media (max-width: 992px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;        /* MÁS PEQUEÑO en móviles */
   }
   
   .hero-description {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
   
   .photo-container-small {
@@ -154,10 +166,10 @@ body.bg-light .custom-list li:before {
   }
   
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;      /* MÁS PEQUEÑO en móviles */
   }
   
   .section-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }

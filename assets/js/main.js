@@ -103,7 +103,8 @@
         var keys = p.featured
           ? ["problem", "architecture", "decisions", "results", "stack", "status", "thesis"]
           : ["problem", "approach", "stack", "result"];
-        keys.forEach(function (key) { field(dl, key, p[key], i); });
+        // Un campo ausente se omite; un string vacío se muestra como TODO
+        keys.forEach(function (key) { if (p[key] !== undefined) field(dl, key, p[key], i); });
 
         if (!p.featured) {
           dl.appendChild(el("dt", { text: L.link }));

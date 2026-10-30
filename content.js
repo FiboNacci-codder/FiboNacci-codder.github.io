@@ -74,16 +74,12 @@ window.CONTENT = {
             title: "Evaluating LLM systems",
             question: "How far can a single LLM judge be trusted to measure hallucination in RAG answers, including questions the documents cannot answer?",
             connection: "I compared ten generator LLMs using one LLM judge (gpt-oss-120b) for hallucination; Gemma 4 26B-A4B gave the best balance, hallucinating in 15.3% of answers and correctly rejecting 97.6% of unanswerable questions."
-          },
-          {
-            title: "Algorithms",
-            question: "",
-            connection: ""
           }
         ]
       },
       // items destacados: { featured: true, title, period, restricted, problem, architecture: [], decisions: [], results: [], stack: [], status, thesis }
-      // items normales:   { title, period, problem, approach, stack: [], result, link }
+      // items normales:   { title, period, problem, approach, stack: [], result?, link }
+      //   result: se omite si no hay dato; "" → TODO
       //   link: "" → TODO, null → "sin repositorio público"
       // others: { title, period, link? }
       projects: {
@@ -147,7 +143,6 @@ window.CONTENT = {
             problem: "The knapsack problem is NP-complete, and sequential solutions slow down quickly as instances grow.",
             approach: "Reimplemented a knapsack solution as a parallel algorithm on the GPU with CUDA and compared it with the sequential version; the parallel version improved performance.",
             stack: ["CUDA"],
-            result: "",
             link: null
           },
           {
@@ -156,7 +151,6 @@ window.CONTENT = {
             problem: "RSA relies on the hardness of factoring, which quantum algorithms undermine. How does that attack work in practice?",
             approach: "Implemented RSA with small toy keys (8-bit primes) and used quantum phase estimation, simulated in Cirq, for decryption.",
             stack: ["Python", "Cirq", "NumPy"],
-            result: "",
             link: "https://github.com/FiboNacci-codder/RSA_QC"
           },
           {
@@ -165,7 +159,6 @@ window.CONTENT = {
             problem: "How much does a hand-written assembly implementation change execution time compared with a high-level one?",
             approach: "Implemented QuickSort in x86 assembly and in C, with benchmark scripts over input sizes from 1 to 10⁸ elements in ascending, descending and random order. Course project, with Jaime Antonio Rodriguez Phillco.",
             stack: ["x86 assembly", "C", "GCC", "Bash"],
-            result: "",
             link: "https://github.com/FiboNacci-codder/TrabajoLE"
           }
         ],
@@ -326,11 +319,6 @@ window.CONTENT = {
             title: "Evaluación de sistemas con LLMs",
             question: "¿Hasta qué punto se puede confiar en un único LLM como juez para medir la alucinación en respuestas de RAG, incluidas las preguntas que los documentos no pueden responder?",
             connection: "Comparé diez LLMs generadores con un único juez (gpt-oss-120b) para la alucinación; Gemma 4 26B-A4B ofreció el mejor equilibrio: alucinó en el 15,3 % de las respuestas y rechazó correctamente el 97,6 % de las preguntas sin respuesta."
-          },
-          {
-            title: "Algoritmos",
-            question: "",
-            connection: ""
           }
         ]
       },
@@ -395,7 +383,6 @@ window.CONTENT = {
             problem: "El problema de la mochila es NP-completo y las soluciones secuenciales se vuelven lentas al crecer las instancias.",
             approach: "Reimplementación de una solución como algoritmo paralelo en GPU con CUDA y comparación con la versión secuencial; la versión paralela mejoró el rendimiento.",
             stack: ["CUDA"],
-            result: "",
             link: null
           },
           {
@@ -404,7 +391,6 @@ window.CONTENT = {
             problem: "RSA depende de la dificultad de factorizar, algo que los algoritmos cuánticos socavan. ¿Cómo funciona ese ataque en la práctica?",
             approach: "Implementación de RSA con claves de juguete (primos de 8 bits) y uso de estimación de fase cuántica, simulada en Cirq, para el descifrado.",
             stack: ["Python", "Cirq", "NumPy"],
-            result: "",
             link: "https://github.com/FiboNacci-codder/RSA_QC"
           },
           {
@@ -413,7 +399,6 @@ window.CONTENT = {
             problem: "¿Cuánto cambia el tiempo de ejecución una implementación escrita a mano en ensamblador frente a una de alto nivel?",
             approach: "QuickSort implementado en ensamblador x86 y en C, con scripts de benchmark para tamaños de 1 a 10⁸ elementos en orden ascendente, descendente y aleatorio. Proyecto de curso, junto con Jaime Antonio Rodriguez Phillco.",
             stack: ["Ensamblador x86", "C", "GCC", "Bash"],
-            result: "",
             link: "https://github.com/FiboNacci-codder/TrabajoLE"
           }
         ],
@@ -580,11 +565,6 @@ window.CONTENT = {
             title: "Avaliação de sistemas com LLMs",
             question: "Até que ponto é possível confiar em um único LLM como avaliador para medir a alucinação em respostas de RAG, incluindo perguntas que os documentos não respondem?",
             connection: "Comparei dez LLMs geradores usando um único avaliador (gpt-oss-120b) para a alucinação; o Gemma 4 26B-A4B ofereceu o melhor equilíbrio: alucinou em 15,3% das respostas e rejeitou corretamente 97,6% das perguntas sem resposta."
-          },
-          {
-            title: "Algoritmos",
-            question: "",
-            connection: ""
           }
         ]
       },
@@ -649,7 +629,6 @@ window.CONTENT = {
             problem: "O problema da mochila é NP-completo, e soluções sequenciais tornam-se lentas à medida que as instâncias crescem.",
             approach: "Reimplementação de uma solução como algoritmo paralelo em GPU com CUDA e comparação com a versão sequencial; a versão paralela apresentou melhor desempenho.",
             stack: ["CUDA"],
-            result: "",
             link: null
           },
           {
@@ -658,7 +637,6 @@ window.CONTENT = {
             problem: "A segurança do RSA se apoia na dificuldade de fatorar inteiros, premissa que algoritmos quânticos colocam em xeque. Como esse ataque funciona na prática?",
             approach: "Implementação do RSA com chaves de tamanho reduzido (primos de 8 bits) e uso de estimativa de fase quântica, simulada no Cirq, para a decifração.",
             stack: ["Python", "Cirq", "NumPy"],
-            result: "",
             link: "https://github.com/FiboNacci-codder/RSA_QC"
           },
           {
@@ -667,7 +645,6 @@ window.CONTENT = {
             problem: "Em que medida uma implementação escrita manualmente em assembly altera o tempo de execução em relação a uma implementação de alto nível?",
             approach: "QuickSort implementado em assembly x86 e em C, com scripts de benchmark para tamanhos de 1 a 10⁸ elementos em ordem crescente, decrescente e aleatória. Projeto de disciplina, em coautoria com Jaime Antonio Rodriguez Phillco.",
             stack: ["Assembly x86", "C", "GCC", "Bash"],
-            result: "",
             link: "https://github.com/FiboNacci-codder/TrabajoLE"
           }
         ],
